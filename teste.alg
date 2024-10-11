@@ -20,10 +20,12 @@ limpatela
                  c[i]<-A[i]
                  c[i+1]<-B[i]
             senao
-             //Quando crio a condição Se..entao, a contagem vai iniciar a partir do 2
-            // (na condição par) depois que a contagem for iniciada, i vai valer 2 e
-            // vai entrar na segunda parte do laço que possui D[i-1] que vai ser 2-1.
-            // Nesse caso, a primeira posição vai ser preenchida.
+            // Quando crio a condição se..entao, a contagem vai iniciar a partir do 2
+            // (na condição par) depois que a contagem for iniciada a posição 2 vai
+            // ser preenchida primeiro. O i vai valer 2 e vai entrar na segunda parte
+            // do laço que possui D[i-1] que vai ser 2-1=1.
+            // Nesse caso, a primeira D[i-1] e segunda D[i] posições serão preenchidas.
+            //Isso vai se repetir até que todas as posições sejam preenchidas.
                 D[i]<-A[i]
                 D[i-1]<-B[i]
             fimse
