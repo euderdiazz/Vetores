@@ -11,37 +11,51 @@ para c<-1 ate 5 faca
     escreva("Digite o ",c,"º valor da temperatura (em ºC): ")
     leia(A[c])
     B[c]<-((9*A[c]+160)/5)
-fimpara
+         maior<-B[1]
+         menor<-B[1]
+    fimpara
 
 Para c<-1 ate 5 faca
     se B[c]>20 entao
         soma<-soma+B[c]
     fimse
+    
 fimpara
 
-//Identificar a maior e menor temperatura em F
-maior<-B[1]
-menor<-B[1]
-    Para c<-1 ate 5 faca
+//Identificar a maior e menor temperatura em F (O erro estava no comando Se...entao que não tinha separação entre a duas
+//estruturas
+
+    Para c<-2 ate 5 faca
         se B[c]> maior entao
             maior<-B[c]
-        Se B[c]<menor entao
+        fimse
+        Se B[c]< menor entao
             menor<-B[c]
         fimse
-        fimse
+        
     fimpara
 //Identificar a posição da maior e da menor temperatura
         para c<-1 ate 5 faca
             se B[c]=maior entao
-                escreval("A maior temperatura está na posição ",c)
+                escreval("A maior em ºF temperatura está na posição ",c)
             fimse
         fimpara
 
         para c<-1 ate 5 faca
             se B[c]= menor entao
-                escreval("A menor temperatura está na posição ",c)
+                escreval("A menor em ºF temperatura está na posição ",c)
             fimse
         fimpara
+
+escreval()
+escreva("O vetor A apresenta os seguintes valores em ºF: ")            
+para c<-1 ate 5 faca
+    escreva ("{",A[c],"}")
+    se c<>5 entao
+        escreva(" - ")
+    fimse
+fimpara
+escreval()
 escreva("O vetor B apresenta os seguintes valores em ºF: ")            
 para c<-1 ate 5 faca
     escreva ("{",B[c],"}")
